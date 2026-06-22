@@ -15,15 +15,13 @@ export DEPLOY_PIPEWIRE=1
 export DEPLOY_QT=1
 export DEPLOY_P11KIT=1
 export URUNTIME_PRELOAD=1 # really needed here
-
-# strip helium bundled libs
-strip -s -R .comment --strip-unneeded ./AppDir/bin/lib*.so
+export STRACE_BINARY=helium
+export STRACE_FLAGS='google.com --no-sandbox'
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/helium -- google.com --no-sandbox
-STRACE_MODE=0 quick-sharun \
+quick-sharun \
+	./AppDir/bin/helium*          \
 	./AppDir/bin/chrome*          \
-	./AppDir/bin/helium_*         \
 	./AppDir/bin/libqt6_shim.so*  \
 	/usr/lib/libQt6Widgets.so*    \
 	/usr/lib/libnss*              \
