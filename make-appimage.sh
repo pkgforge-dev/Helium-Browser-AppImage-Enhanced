@@ -5,7 +5,7 @@ set -eu
 ARCH=$(uname -m)
 export ARCH
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook:fix-namespaces.hook"
+export ADD_HOOKS="self-updater.hook:fix-namespaces.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=$PWD/AppDir/bin/product_logo_256.png
 export DESKTOP=https://raw.githubusercontent.com/imputnet/helium-linux/refs/heads/main/package/helium.desktop
