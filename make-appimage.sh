@@ -32,6 +32,7 @@ quick-sharun \
 	/usr/lib/libcloudproviders*   \
 	/usr/lib/libgtk-3.so*
 
+rm -rf ./AppDir/lib/sharun-preload
 # Additional changes can be done in between here
 
 # Turn AppDir into AppImage
