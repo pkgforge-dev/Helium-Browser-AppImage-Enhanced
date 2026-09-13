@@ -32,7 +32,7 @@ fi
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano intel-media-driver-mini ffmpeg-mini
+# get-debloated-pkgs --add-common --prefer-nano intel-media-driver-mini ffmpeg-mini
 
 # Comment this out if you need an AUR package
 #make-aur-package PACKAGENAME
