@@ -24,7 +24,7 @@ pacman -Syu --noconfirm \
 	xcb-util-cursor     \
 	xcb-util-keysyms    \
 	xcb-util-wm         \
-	zsync gtk3 qt6-base vulkan-radeon ffmpeg 
+	zsync
 
 if [ "$ARCH" = 'x86_64' ]; then
 		pacman -Syu --noconfirm libva-intel-driver
@@ -32,7 +32,7 @@ fi
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-# get-debloated-pkgs --add-common --prefer-nano intel-media-driver-mini ffmpeg-mini
+get-debloated-pkgs --add-common --prefer-nano intel-media-driver-mini ffmpeg-mini
 
 # Comment this out if you need an AUR package
 #make-aur-package PACKAGENAME
