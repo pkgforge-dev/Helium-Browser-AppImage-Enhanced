@@ -32,7 +32,10 @@ quick-sharun \
 	/usr/lib/libcloudproviders*   \
 	/usr/lib/libgtk-3.so*
 
-rm ./AppDir/lib/sharun-preload/cross-libc-dlopen.so
+# PR #39 preview: swap the bundled preload for the fixed build instead of
+# deleting it, so the AppImage test exercises the fix on both architectures.
+cp "./pr39-preload/cross-libc-dlopen-$ARCH.so" \
+	./AppDir/lib/sharun-preload/cross-libc-dlopen.so
 # Additional changes can be done in between here
 
 # Turn AppDir into AppImage

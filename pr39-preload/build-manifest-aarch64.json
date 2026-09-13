@@ -1,0 +1,27 @@
+{
+  "schema": "cross-libc-dlopen/build-manifest/1",
+  "arch": "aarch64",
+  "variant": "default",
+  "floor_glibc": "2.31",
+  "compiler": "aarch64-linux-gnu-gcc (Debian 10.2.1-6) 10.2.1 20210110",
+  "sources": {
+    "cross-libc-dlopen.c": "264081c0fe7328f7c7866a7662e014ec5d12e16f29871eb554b0001b19a223f0",
+    "gl-fwd.c": "405c2b71ffefe4b186ef424c654b08f5f299c40b1ee181d6d15c0bc955b6e86c",
+    "runtime-select.c": "7b4911d4a727ebfc6875cc1233bd51161887e528a818e6defd2f8d868b8533e3",
+    "forward-shim.c": "f86639caf719eb22336211a41bd815951cd70795db29478b3adb2477df5cdd75",
+    "version-compat.c": "b856e7ad252ec2654e0c9c3af639f479a2f091e03ccc6a5cc72926a0e043148f",
+    "cld-env.h": "c9765a4e5c10db854a658dec84672f0b41add66164589f1d3e841f94b07a9840",
+    "cld-symver.h": "ac1d95abd01f928206e6c350c5f725bac12a9c5f81ba823f3224506407609a3c",
+    "ld-conf.h": "36cead529001e6c66fc96ad3163690ffff0065594403885d83b30380a89c4d40",
+    "gl-fwd-gl.h": "cfa6f9284ba407a3b41edd7885b0a447893939599878bc62d9ab42bb3a51bf5c",
+    "gl-fwd-egl.h": "4b732c8bdee9c294b3c39927df1361f9f0a46b05c6553fe8a188860191a8b8e4",
+    "gl-fwd-gles2.h": "36d3adff431451d931f03fe2206ad0d1d82a06c2392f6f534db4d101c98c92b3"
+  },
+  "artifacts": {
+    "cross-libc-dlopen.so": { "sha256": "df3c762a4d46063b773e173e6ec02e193602cd39f9411a08a505a49ac13ca7e2", "max_glibc": "2.17", "soname": "", "entry_points": 2 },
+    "gl-fwd.so": { "sha256": "1bfda51b9c417c00e702b905decf053fcb28159fa958b17ddc158606ccf0c884", "max_glibc": "2.17", "soname": "libGL.so.1", "entry_points": 3470 },
+    "egl-fwd.so": { "sha256": "839b65103b75da456ef0d2bd5c8f95c1f61bbfb5524b2d10f070b1648114fda2", "max_glibc": "2.17", "soname": "libEGL.so.1", "entry_points": 44 },
+    "gles-fwd.so": { "sha256": "79248f2db688432490e3ae0971ab94821d8aff5498ad752295d0b5a63daa64e9", "max_glibc": "2.17", "soname": "libGLESv2.so.2", "entry_points": 358 },
+    "runtime-select": { "sha256": "2998e21dfcf1f98791ecb679eb76dfc439bed4ef473a75abe8ea8293211e0d17", "max_glibc": "2.17", "soname": "", "entry_points": 0 }
+  }
+}
