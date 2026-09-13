@@ -24,7 +24,7 @@ pacman -Syu --noconfirm \
 	xcb-util-cursor     \
 	xcb-util-keysyms    \
 	xcb-util-wm         \
-	zsync gtk3 gt6-base vulkan-radeon ffmpeg 
+	zsync gtk3 qt6-base vulkan-radeon ffmpeg 
 
 if [ "$ARCH" = 'x86_64' ]; then
 		pacman -Syu --noconfirm libva-intel-driver
