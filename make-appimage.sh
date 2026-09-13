@@ -18,7 +18,7 @@ export URUNTIME_PRELOAD=1 # really needed here
 export STRACE_BINARY=helium
 export STRACE_FLAGS='google.com --no-sandbox'
 
-quick-sharun --testt ./AppDir/bin/helium --no-sandbox
+quick-sharun --test ./AppDir/bin/helium --no-sandbox
 
 # Deploy dependencies
 quick-sharun \
